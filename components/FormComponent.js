@@ -1,17 +1,17 @@
 export const FormComponent = {
+    props: {
+        handlesubmit: Function
+    },
     data() {
         return {
             title: "",
             content: ""
         }
     },
-    props: {
-        handleSubmit: Function
-    },
     template: `
-        <form :submit.prevent="handleSubmit(title, content)">
-            <input type="text" placeholder="title">
-            <input type="text" placeholder="content">
+        <form @submit.prevent="handlesubmit(title, content)">
+            <input type="text" placeholder="title" v-model="title">
+            <input type="text" placeholder="content" v-model="content">
             <input type="submit" value="Submit">
         </form>
     `

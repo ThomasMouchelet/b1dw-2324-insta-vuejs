@@ -9,7 +9,9 @@
 <body>
     
     <div id="app">
-        <form-component ></form-component>
+        <form-component 
+            :handlesubmit="handleSubmit"
+        ></form-component>
 
         <ul v-for="postItem in postList">
             <card-post
