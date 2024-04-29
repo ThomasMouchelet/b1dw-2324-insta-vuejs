@@ -7,8 +7,12 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-
+    
     <div id="app">
+        <form-component 
+            :handlesubmit="handleSubmit"
+        ></form-component>
+
         <ul v-for="postItem in postList">
             <card-post
                 :id="postItem.id"
@@ -17,7 +21,7 @@
                 :like="postItem.like"
                 :image_url="postItem.image_url"
                 :increase="increase"
-            />
+            ></card-post>
         </ul>
     </div>
 
