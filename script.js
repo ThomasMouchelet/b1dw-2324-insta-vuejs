@@ -1,9 +1,11 @@
 const { createApp, ref } = Vue;
 import { CardItem } from "./components/CardItem.js";
+import { FormComponent } from "./components/FormComponent.js";
 
 const vm = createApp({
   components: {
     "card-post": CardItem,
+    "form-component": FormComponent
   },
   data() {
     return {
